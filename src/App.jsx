@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Header from './layouts/Header'
 import Footer from './layouts/Footer'
+import AgentDetail from './pages/AgentDetail'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
     <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/agents/:uuid' element={<AgentDetail/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
