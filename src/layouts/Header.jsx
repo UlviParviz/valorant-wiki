@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div
       className={`py-5 text-2xl px-4 border-b-2 border-black flex justify-between items-center transition-all duration-1000 ${
-        scrollPosition > 80 ? 'fixed w-full top-0 left-0 bg-white z-50 shadow-lg' : ''
+        scrollPosition > 30 ? 'fixed w-full top-0 left-0 bg-white z-50 shadow-lg' : ''
       }`}
     >
       <Link to={'/'} className='text-red-600 font-bold'>Valorant-Wiki</Link>

@@ -29,9 +29,9 @@ const AgentDetail = () => {
     {agentDetailStatus === 'LOADING' ? (
       <Loader/>
     ) : (
-    <div className="flex justify-center lg:flex-row flex-col ">
+    <div className="flex justify-center lg:flex-row flex-col min-h-screen">
       <div
-        className="lg:w-[50%] w-full py-3"
+        className="lg:w-[50%] w-full py-5"
         style={{
           backgroundColor: `#${backgroundGradientColors?.[0] || '000'}`,
           backgroundImage: `url(${background})`,
