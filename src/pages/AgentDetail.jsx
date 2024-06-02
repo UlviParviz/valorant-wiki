@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getAgentDetail } from "../redux/agentSlice";
+import Loader from "../layouts/Loader";
 
 const AgentDetail = () => {
   const { uuid } = useParams();
@@ -24,7 +25,11 @@ const AgentDetail = () => {
   }, [dispatch, uuid]);
 
   return (
-    <div className="flex justify-center lg:flex-row flex-col">
+    <>
+    {agentDetailStatus === 'LOADING' ? (
+      <Loader/>
+    ) : (
+    <div className="flex justify-center lg:flex-row flex-col ">
       <div
         className="lg:w-[50%] w-full py-3"
         style={{
@@ -69,7 +74,7 @@ const AgentDetail = () => {
                 key={index}
                 className="bg-black text-white hover:text-black font-bold flex gap-2 px-1.5 rounded-md hover:bg-transparent hover:cursor-default transition-all duration-700 py-2 items-center"
               >
-                <div className="w-[25%]">
+                <div className="w-[25%] border-r-2 flex justify-center items-center">
                   <img className="w-[40px] h-[45px]" src={ability?.displayIcon} alt={`${ability?.displayName} icon`} />
                 </div>
                 <div className="text-end w-full">
@@ -89,6 +94,8 @@ const AgentDetail = () => {
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 };
 
