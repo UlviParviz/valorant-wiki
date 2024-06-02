@@ -26,7 +26,7 @@ A fully responsive Valorant Wikipedia built using React and the Valorant API. Th
 
 2. **Navigate to the project directory**
    ```sh
-   cd valorant-wikipedia
+   cd valorant-wiki
 
 3. **Install NPM packages**
    ```sh
